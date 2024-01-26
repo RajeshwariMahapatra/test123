@@ -1,5 +1,7 @@
+
 import 'package:brain_school/routes.dart';
-import 'package:brain_school/screens/splash_screen/splash_screen.dart';
+import 'package:brain_school/screens/onboarding.dart';
+
 import 'package:brain_school/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
@@ -23,7 +25,7 @@ class MyApp extends StatelessWidget {
         theme: CustomTheme().baseTheme,
         //initial route is splash screen
         //mean first screen
-        initialRoute: SplashScreen.routeName,
+        initialRoute: OnBoardingScreen.routeName,
         //define the routes file here in order to access the routes any where all over the app
         routes: routes,
       );

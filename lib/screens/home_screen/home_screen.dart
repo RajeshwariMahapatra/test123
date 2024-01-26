@@ -20,8 +20,8 @@ class HomeScreen extends StatelessWidget {
           //we will divide the screen into two parts
           //fixed height for first half
           Container(
-            width: 100.w,
-            height: 30.h,
+            width: 280.w,
+            height: 40.h,
             padding: EdgeInsets.all(kDefaultPadding),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -33,11 +33,11 @@ class HomeScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         StudentName(
-                          studentName: 'Aisha',
+                          studentName: 'Rajeshwari',
                         ),
                         kHalfSizedBox,
                         StudentClass(
-                            studentClass: 'Class X-II A | Roll no: 12'),
+                            studentClass: 'MBBS 3RD year'),
                         kHalfSizedBox,
                         StudentYear(studentYear: '2020-2021'),
                       ],
@@ -227,7 +227,7 @@ class HomeCard extends StatelessWidget {
             SvgPicture.asset(
               icon,
               height: SizerUtil.deviceType == DeviceType.tablet ? 30.sp : 40.sp,
-              width: SizerUtil.deviceType == DeviceType.tablet ? 30.sp : 40.sp,
+              width: SizerUtil.deviceType == DeviceType.tablet ? 40.sp : 40.sp,
               color: kOtherColor,
             ),
             Text(
