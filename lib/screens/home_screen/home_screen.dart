@@ -1,7 +1,8 @@
 import 'package:brain_school/constants.dart';
 import 'package:brain_school/screens/assignment_screen/assignment_screen.dart';
-import 'package:brain_school/screens/datesheet_screen/datesheet_screen.dart';
-import 'package:brain_school/screens/fee_screen/fee_screen.dart';
+import 'package:brain_school/screens/homePage.dart';
+// import 'package:brain_school/screens/datesheet_screen/datesheet_screen.dart';
+// import 'package:brain_school/screens/fee_screen/fee_screen.dart';
 import 'package:brain_school/screens/my_profile/my_profile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -60,17 +61,10 @@ class HomeScreen extends StatelessWidget {
                       onPress: () {
                         //go to attendance screen
                       },
-                      title: 'Attendance',
-                      value: '90.02%',
+                      title: 'Leaderboard', value: '',
+                      
                     ),
-                    StudentDataCard(
-                      onPress: () {
-                        //go to fee due screen
-                        Navigator.pushNamed(context, FeeScreen.routeName);
-                      },
-                      title: 'Fees Due',
-                      value: '600\$',
-                    ),
+                    
                   ],
                 )
               ],
@@ -94,7 +88,10 @@ class HomeScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         HomeCard(
-                          onPress: () {},
+                          onPress: () {
+                            Navigator.pushNamed(
+                                context, AssignmentScreen.routeName);
+                          },
                           icon: 'assets/icons/quiz.svg',
                           title: 'Take Quiz',
                         ),
@@ -113,9 +110,12 @@ class HomeScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         HomeCard(
-                          onPress: () {},
+                          onPress: () {
+                            Navigator.pushNamed(
+                                context, homePage.routeName);
+                          },
                           icon: 'assets/icons/holiday.svg',
-                          title: 'Holidays',
+                          title: 'Books',
                         ),
                         HomeCard(
                           onPress: () {},
@@ -133,60 +133,13 @@ class HomeScreen extends StatelessWidget {
                           title: 'Result',
                         ),
                         HomeCard(
-                          onPress: () {
-                            Navigator.pushNamed(
-                                context, DateSheetScreen.routeName);
-                          },
-                          icon: 'assets/icons/datesheet.svg',
-                          title: 'DateSheet',
-                        ),
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        HomeCard(
                           onPress: () {},
                           icon: 'assets/icons/ask.svg',
                           title: 'Ask',
                         ),
-                        HomeCard(
-                          onPress: () {},
-                          icon: 'assets/icons/gallery.svg',
-                          title: 'Gallery',
-                        ),
                       ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        HomeCard(
-                          onPress: () {},
-                          icon: 'assets/icons/resume.svg',
-                          title: 'Leave\nApplication',
-                        ),
-                        HomeCard(
-                          onPress: () {},
-                          icon: 'assets/icons/lock.svg',
-                          title: 'Change\nPassword',
-                        ),
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        HomeCard(
-                          onPress: () {},
-                          icon: 'assets/icons/event.svg',
-                          title: 'Events',
-                        ),
-                        HomeCard(
-                          onPress: () {},
-                          icon: 'assets/icons/logout.svg',
-                          title: 'Logout',
-                        ),
-                      ],
-                    ),
+                    ),    
+                
                   ],
                 ),
               ),

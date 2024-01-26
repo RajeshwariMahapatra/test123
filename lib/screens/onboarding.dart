@@ -14,7 +14,7 @@ class OnBoardingScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Next Page'),
+        title: Text(''),
       ),
       body: Column(
         children: [
@@ -37,7 +37,16 @@ class OnBoardingScreen extends StatelessWidget {
                 MaterialPageRoute(builder: (context) => LoginScreen()),
               );
             },
-            child: Text('Go to Login Screen'),
+            style: ElevatedButton.styleFrom(
+              alignment: Alignment(10, -10),
+    primary: Colors.blue, // Change the background color
+    onPrimary: Colors.white, // Change the text color
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(10.0), // Adjust border radius
+    ),
+    padding: EdgeInsets.symmetric(horizontal: 40.0, vertical: 30.0), // Adjust padding
+  ),
+            child: Text('Get Started'),
           ),
         ],
       ),

@@ -1,4 +1,5 @@
 
+import 'package:brain_school/screens/homePage.dart';
 import 'package:brain_school/screens/login_screen/login_screen.dart';
 import 'package:brain_school/screens/splash_screen/splash_screen.dart';
 import 'package:flutter/cupertino.dart';
@@ -13,6 +14,7 @@ Map<String, WidgetBuilder> routes = {
   //all screens will be registered here like manifest in android
   OnBoardingScreen.routeName: (context) => OnBoardingScreen(),
   SplashScreen.routeName: (context) => SplashScreen(),
+  homePage.routeName: (context) => homePage(),
   LoginScreen.routeName: (context) => LoginScreen(),
   HomeScreen.routeName: (context) => HomeScreen(),
   MyProfileScreen.routeName: (context) => MyProfileScreen(),
